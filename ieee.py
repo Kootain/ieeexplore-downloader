@@ -12,7 +12,7 @@ import sys
 import configparser
 
 cf = configparser.ConfigParser()
-cf.read('../ieee.conf')
+cf.read('config.conf')
 
 if cf.getboolean('task', 'upload_cos'):
     from qcloud_cos import CosConfig
