@@ -163,7 +163,7 @@ if __name__ == '__main__':
     try:
         path = cf.get('task','paper_path')
     except configparser.NoOptionError as e:
-        path = path=os.getcwd()
+        path = os.getcwd()
         print('conf [task] paper_path unset, download to current path: ' + path)
     downloader = Downloader(path)
     downloader.test_proxy()
